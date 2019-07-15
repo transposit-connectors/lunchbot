@@ -1,8 +1,10 @@
 (params) => {
-  const messages = api.run('this.get_conversations_history')
+  const messages = api.run('this.get_conversations_history').filter(x => !!x)
+  
+  console.log(messages[8])
   
   const result = api.run("this.create_record", {"messages": messages})
-  console.log(result)
+  
 }
 
 /*
