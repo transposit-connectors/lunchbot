@@ -8,7 +8,7 @@
       "operations": [{
         "id": "get_channels_list",
         "tql": {
-          "tql": "SELECT id FROM slack_identify.get_channels_list\n  WHERE name=\"lunch\"\n  LIMIT 20\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
+          "tql": "SELECT id FROM slack.get_channels_list\n  WHERE name=\"lunch\"\n  LIMIT 20\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
         }
       }, {
         "id": "get_conversations_history",
@@ -17,7 +17,7 @@
             "name": "channel_id",
             "type": "STRING"
           }],
-          "tql": "SELECT ts, attachments[2].fields FROM slack_identify.get_conversations_history\n  WHERE inclusive=true\n  AND channel=@channel_id\n  AND username='Polly'\n  LIMIT 1000\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
+          "tql": "SELECT ts, attachments[2].fields FROM slack.get_conversations_history\n  WHERE inclusive=true\n  AND channel=@channel_id\n  AND username='Polly'\n  LIMIT 1000\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
         }
       }, {
         "id": "data_cleaner",
