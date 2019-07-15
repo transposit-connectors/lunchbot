@@ -62,6 +62,30 @@
           }],
           "tql": "-- This operation gets run when the user has not yet visited the configuration page to connect their\n-- slack user. Please visit Users >> User Configuration for more details.\nSELECT * FROM slack_bot.post_chat_ephemeral\n  WHERE $body.channel = @slackChannelId\n  AND $body.user = @slackUserId\n  AND $body.text = \"User not found\"\n  AND $body.blocks = (SELECT [{\n      \"type\": \"section\",\n      \"text\": {\n        \"type\": \"mrkdwn\",\n        \"text\": \"Please configure your user\"\n      },\n    }])\n"
         }
+      }, {
+        "id": "get_channels_list",
+        "tql": {
+          "tql": "SELECT * FROM slack_identify.get_channels_list\n  LIMIT 20\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
+        }
+      }, {
+        "id": "get_conversations_history",
+        "tql": {
+          "tql": "SELECT attachments[2].fields[0].value FROM slack_identify.get_conversations_history\n  WHERE inclusive=true\n  AND channel='C5JAAD81M'\n  AND username='Polly'\n  LIMIT 1000\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
+        }
+      }, {
+        "id": "create_record",
+        "tql": {
+          "parameters": [{
+            "name": "messages",
+            "type": "STRING"
+          }],
+          "tql": "SELECT * FROM airtable.create_record\n  WHERE baseId='appldesJQpYr4iMvA'\n  AND table='Table 1'\n  AND $body=(SELECT {\n    'fields' : @messages\n  })\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
+        }
+      }, {
+        "id": "untitled",
+        "function": {
+          "js": "untitled.js"
+        }
       }],
       "dataConnections": [{
         "ref": "slack_identify.raw",
