@@ -23,14 +23,14 @@
           "tql": "SELECT ts, attachments[2].fields FROM slack_identify.get_conversations_history\n  WHERE inclusive=true\n  AND channel=@channel_id\n  AND username='Polly'\n  LIMIT 1000\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
         }
       }, {
-        "id": "append_sheet_values",
-        "tql": {
-          "tql": "SELECT * FROM google_sheets.append_sheet_values\n  WHERE valueInputOption='INPUT_VALUE_OPTION_UNSPECIFIED | RAW | USER_ENTERED'\n  AND range='<required_string>'\n  AND spreadsheetId='<required_string>'\n  AND responseValueRenderOption='FORMATTED_VALUE | UNFORMATTED_VALUE | FORMULA'\n  AND insertDataOption='OVERWRITE | INSERT_ROWS'\n  AND responseDateTimeRenderOption='SERIAL_NUMBER | FORMATTED_STRING'\n  AND includeValuesInResponse=<boolean>\n  AND $body=(SELECT {\n    'majorDimension' : 'DIMENSION_UNSPECIFIED | ROWS | COLUMNS',\n    'values' : [ [ { } ] ],\n    'range' : '<string>'\n  })\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
-        }
-      }, {
         "id": "data_cleaner",
         "function": {
           "js": "untitled.js"
+        }
+      }, {
+        "id": "totals",
+        "function": {
+          "js": "totals.js"
         }
       }],
       "dataConnections": [{
