@@ -5,10 +5,10 @@
   vals = vals.filter(v => v[0])
   var z = vals.map(a => a.map(t => [t.match(/\: (.*)/)[1], parseInt(t.match(/\(\d\)/)[0][1])]))
   
-  var a = z[0].reduce((acc, cur) => {
+  var a = z.map(t => t.reduce((acc, cur) => {
     acc[cur[0]] = cur[1];
     return acc
-  })
+  }, {}))
   
   console.log(a)
   
