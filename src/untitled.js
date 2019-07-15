@@ -33,9 +33,6 @@
   }))
   
   return a
-  
-  // const result = api.run("this.create_record", {"messages": messages})
-  
 }
 
 /*
