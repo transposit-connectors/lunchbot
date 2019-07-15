@@ -8,7 +8,7 @@
       "operations": [{
         "id": "get_channels_list",
         "tql": {
-          "tql": "SELECT id FROM slack.get_channels_list\n  WHERE name=\"lunch\"\n  LIMIT 20\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
+          "tql": "SELECT id FROM slack.get_channels_list\n  WHERE name=\"lunch\"\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
         }
       }, {
         "id": "get_conversations_history",
