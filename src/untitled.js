@@ -1,16 +1,25 @@
 (params) => {
-  const messages = api.run('this.get_conversations_history').filter(x => x.fields)
+  const channel_id = api.run('this.get_channels_list')[0].id
+
+  // remove null messages from the array with .filter()
+  const messages = api.run('this.get_conversations_history', {channel_id: channel_id}).filter(x => x.fields)
   
-  var vals = messages.map(x => x.fields.map(y => y.value).filter(z => z.match(/\(\d\)/) && z.match(/\: (.*)/)));
-  vals = vals.filter(v => v[0])
-  var z = vals.map(a => a.map(t => [t.match(/\: (.*)/)[1], parseInt(t.match(/\(\d\)/)[0][1])]))
+  // filter out options that didn't receive any votes from each poll
+  var vals = messages.map(x => [x.ts, x.fields.map(y => y.value).filter(z => z.match(/\(\d\)/) && z.match(/\: (.*)/))]);
   
-  var a = z.map(t => t.reduce((acc, cur) => {
-    acc[cur[0]] = cur[1];
+  // remove polls with zero options that got any votes
+  vals = vals.filter(v => v[1][0])
+  
+  // pull out the restaurant title and vote count for each toption 
+  var z = vals.map(a => [a[0], a[1].map(t => [t.match(/\: (.*)/)[1], parseInt(t.match(/\(\d\)/)[0][1])])])
+  
+  // put each message in object format
+  var a = z.map(t => t[1].reduce((acc, cur) => {
+    acc[1][cur[0]] = cur[1];
     return acc
-  }, {}))
+  }, [t[0],{}]))
   
-  console.log(a)
+  return a
   
   // const result = api.run("this.create_record", {"messages": messages})
   
