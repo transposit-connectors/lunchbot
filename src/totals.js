@@ -1,5 +1,5 @@
 (params) => {
-  var data = api.run('this.data_cleaner').map(d => d[1])
+  var data = api.run('this.data_cleaner').map(d => d.data)
   
   return data.reduce((acc, cur) => {
     Object.keys(cur).map((key, index) => {
