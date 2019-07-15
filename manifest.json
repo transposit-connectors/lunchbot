@@ -4,9 +4,6 @@
       "dependencies": [{
         "name": "transposit/slack:v1.*.*",
         "alias": "slack_identify"
-      }, {
-        "name": "transposit/google_sheets:v1.*.*",
-        "alias": "google_sheets"
       }],
       "operations": [{
         "id": "get_channels_list",
