@@ -160,7 +160,15 @@
         }
       }, {
         "ref": "slack.raw",
-        "requireConsumerSignin": true
+        "requireConsumerSignin": true,
+        "overrides": {
+          "swagger": {
+            "oauthConfig": {
+            },
+            "executionLimits": {
+            }
+          }
+        }
       }],
       "javascriptAPIVersion": "3",
       "source": "src",
