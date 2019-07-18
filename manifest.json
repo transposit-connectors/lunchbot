@@ -8,7 +8,7 @@
       "operations": [{
         "id": "get_channels_list",
         "tql": {
-          "tql": "SELECT id FROM slack.get_channels_list\n  WHERE name=\"lunch\"\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
+          "tql": "SELECT * FROM slack.get_channels_list\n  WHERE name=\"lunch\"\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
         }
       }, {
         "id": "get_conversations_history",
@@ -20,14 +20,36 @@
           "tql": "SELECT ts, attachments[2].fields FROM slack.get_conversations_history\n  WHERE inclusive=true\n  AND channel=@channel_id\n  AND username='Polly'\n  LIMIT 1000\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
         }
       }, {
-        "id": "data_cleaner",
+        "id": "totals",
+        "function": {
+          "js": "totals.js"
+        }
+      }, {
+        "id": "get_data",
+        "function": {
+          "js": "get_data.js"
+        }
+      }, {
+        "id": "daily_counts",
         "function": {
           "js": "untitled.js"
         }
       }, {
-        "id": "totals",
+        "id": "untitled_1",
         "function": {
-          "js": "totals.js"
+          "js": "untitled_1.js"
+        }
+      }, {
+        "id": "get_users_info",
+        "tql": {
+          "parameters": [{
+            "name": "id",
+            "default": {
+              "text": "U74A2H8Q1"
+            },
+            "type": "STRING"
+          }],
+          "tql": "SELECT user.name FROM slack.get_users_info\n  WHERE user=@id\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
         }
       }],
       "dataConnections": [{
