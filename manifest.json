@@ -75,6 +75,11 @@
           }],
           "js": "untitled_1.js"
         }
+      }, {
+        "id": "untitled_2",
+        "function": {
+          "js": "untitled_2.js"
+        }
       }],
       "dataConnections": [{
         "ref": "slack_identify.raw",
