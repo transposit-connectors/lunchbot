@@ -8,7 +8,7 @@
   var vals = messages.map(x => {
     return {
     ts:x.ts, 
-    data:x.fields.map(y => y.value).filter(z => z.match(/\(\d\)/) && z.match(/\: (.*)/))
+    data:x.fields.map(y => y.value).filter(z => z.match(/\(\d\)/) && z.match(/\: (.*)/) && z.match(/(?<=\<\@)[A-Z0-9]*(?=\>)/g))
     }
   });
   
