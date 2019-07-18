@@ -1,6 +1,6 @@
 (params) => {
   var vals = api.run('this.get_daily_users').slice(0, -4)
-  const id = api.run('this.get_member_id', {name: username})[0].id
+  const id = api.run('this.get_member_id', {name: params.username})[0].id
   
   vals = vals.map(v => {
     return {

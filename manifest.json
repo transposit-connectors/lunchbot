@@ -44,7 +44,7 @@
             },
             "type": "STRING"
           }],
-          "tql": "SELECT user.name, user.id FROM slack.get_users_info\n  WHERE user\n  IN (SELECT members FROM slack.get_channels_list WHERE name=\"lunch\" EXPAND BY members)\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
+          "tql": "SELECT user.profile.display_name, user.id FROM slack.get_users_info\n  WHERE user\n  IN (SELECT members FROM slack.get_channels_list WHERE name=\"lunch\" EXPAND BY members)\n  AND user.profile.display_name != \"\" /* exclude hypebot */\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
         }
       }, {
         "id": "get_member_id",
