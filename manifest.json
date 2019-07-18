@@ -158,6 +158,9 @@
             }
           }
         }
+      }, {
+        "ref": "slack.raw",
+        "requireConsumerSignin": true
       }],
       "javascriptAPIVersion": "3",
       "source": "src",
