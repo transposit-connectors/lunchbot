@@ -11,7 +11,7 @@
   
   // put each message in object format
   var a = z.map(t => t.data.reduce((acc, cur) => {
-    acc.data[cur[0].toLowerCase().replace(/[:@\|\[\]?!']/g,"").replace("&amp;", "and").replace("ñ", "n")] = cur[1];
+    acc.data[cur[0].toLowerCase().replace(/[:@\|\[\]?!'.]/g,"").replace("&amp;", "and").replace("ñ", "n")] = cur[1];
     return acc
   }, {
     ts:t.ts,
