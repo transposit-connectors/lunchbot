@@ -35,11 +35,6 @@
           "js": "untitled.js"
         }
       }, {
-        "id": "untitled_1",
-        "function": {
-          "js": "untitled_1.js"
-        }
-      }, {
         "id": "get_users_info",
         "tql": {
           "parameters": [{
@@ -62,6 +57,16 @@
             "type": "STRING"
           }],
           "tql": "SELECT id FROM this.get_users_info\n\tWHERE name=@name\n"
+        }
+      }, {
+        "id": "get_daily_users",
+        "function": {
+          "js": "get_daily_users.js"
+        }
+      }, {
+        "id": "get_user_history",
+        "function": {
+          "js": "untitled_1.js"
         }
       }],
       "dataConnections": [{
