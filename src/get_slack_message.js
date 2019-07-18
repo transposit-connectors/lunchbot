@@ -6,7 +6,7 @@
       "type": "section",
       "text": {
           "type": "mrkdwn",
-          "text": "Hello World!"
+          "text": api.run('this.recommend', {id: user})
       }
     }],
     // The text content gets displayed in the notification
