@@ -49,7 +49,7 @@
             },
             "type": "STRING"
           }],
-          "tql": "SELECT user.name FROM slack.get_users_info\n  WHERE user=@id\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
+          "tql": "SELECT name, last_message\n  FROM this.get_channels_list AS LIST\n  JOIN this.get_users_info AS INFO\n  ON LIST.id = DETAIL.channelId\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
         }
       }],
       "dataConnections": [{
