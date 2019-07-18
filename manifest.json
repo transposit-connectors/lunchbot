@@ -66,6 +66,13 @@
       }, {
         "id": "get_user_history",
         "function": {
+          "parameters": [{
+            "name": "username",
+            "default": {
+              "text": "jules"
+            },
+            "type": "STRING"
+          }],
           "js": "untitled_1.js"
         }
       }],
