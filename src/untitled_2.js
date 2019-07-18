@@ -23,5 +23,8 @@
     return acc
   }, {})
   
-  return counts
+  return {
+    most_recent: data[0].data[0],
+    pairs: counts
+  }
 }

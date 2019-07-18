@@ -67,7 +67,7 @@
         "id": "get_user_history",
         "function": {
           "parameters": [{
-            "name": "username",
+            "name": "id",
             "default": {
               "text": "jules"
             },
@@ -79,6 +79,11 @@
         "id": "prev_visits",
         "function": {
           "js": "untitled_2.js"
+        }
+      }, {
+        "id": "untitled_3",
+        "function": {
+          "js": "untitled_3.js"
         }
       }],
       "dataConnections": [{
