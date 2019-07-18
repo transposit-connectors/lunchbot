@@ -4,6 +4,9 @@
       "dependencies": [{
         "name": "transposit/slack:v3.*.*",
         "alias": "slack"
+      }, {
+        "name": "transposit/slack_webhook:v1.*.*",
+        "alias": "slack_webhook"
       }],
       "operations": [{
         "id": "get_channels_list",
