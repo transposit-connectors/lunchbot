@@ -8,7 +8,7 @@
       "operations": [{
         "id": "get_channels_list",
         "tql": {
-          "tql": "SELECT members FROM slack.get_channels_list\n  WHERE name=\"lunch\"\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
+          "tql": "SELECT * FROM slack.get_channels_list\n  WHERE name=\"lunch\"\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
         }
       }, {
         "id": "get_conversations_history",
@@ -52,9 +52,16 @@
           "tql": "SELECT user.name, user.id FROM slack.get_users_info\n  WHERE user\n  IN (SELECT members FROM slack.get_channels_list WHERE name=\"lunch\" EXPAND BY members)\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
         }
       }, {
-        "id": "get_users_info_1",
+        "id": "get_member_id",
         "tql": {
-          "tql": "SELECT * FROM slack.get_users_info\n  AND user='<string>'\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
+          "parameters": [{
+            "name": "name",
+            "default": {
+              "text": "jules"
+            },
+            "type": "STRING"
+          }],
+          "tql": "SELECT id FROM this.get_users_info\n\tWHERE name=@name\n"
         }
       }],
       "dataConnections": [{

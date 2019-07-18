@@ -1,5 +1,6 @@
 (params) => {
   const vals = api.run('this.get_data')
+  const id = api.run('this.get_member_id', {name: "jules"})
   
   return vals
 }
