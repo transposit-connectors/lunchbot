@@ -1,5 +1,5 @@
 (params) => {
-  var data = api.run('this.get_user_history');
+  var data = api.run('this.get_user_history', {id: params.id});
   
   var counts = data.reduce((acc, cur, idx, array) => {
     if (array[idx+1]) {
