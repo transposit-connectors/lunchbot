@@ -113,6 +113,10 @@
             "type": "OBJECT"
           }],
           "js": "webhook.js"
+        },
+        "access": {
+          "requireApiKey": true,
+          "webhook": true
         }
       }, {
         "id": "get_slack_message",
