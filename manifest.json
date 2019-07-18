@@ -56,7 +56,7 @@
             },
             "type": "STRING"
           }],
-          "tql": "SELECT id FROM this.get_users_info\n\tWHERE name=@name\n"
+          "tql": "SELECT id FROM this.get_users_info\n\tWHERE display_name=@name\n"
         }
       }, {
         "id": "get_daily_users",
