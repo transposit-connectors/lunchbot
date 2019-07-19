@@ -1,6 +1,6 @@
 ({user}) => {
+  console.log(user)
   return {
-    console.log(user)
     // The blocks get displayed in the actual message. 
     // You can play with block kit here: https://api.slack.com/tools/block-kit-builder
     blocks: [{
