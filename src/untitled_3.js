@@ -11,7 +11,7 @@
   	// const mode = arr => { if(arr.filter((x,index)=>arr.indexOf(x)==index).length == arr.length) return arr; else return mode(arr.sort((x,index)=>x-index).map((x,index)=>arr.indexOf(x)!=index ? x : null ).filter(x=>x!=null))}
   	// const modes = mode(choices)
   
-    return "you should go to " + choices[Math.floor(Math.random()*modes.length)]
+    return "you should go to " + choices[Math.floor(Math.random()*choices.length)]
   }
 }
 
