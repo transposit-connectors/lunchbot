@@ -24,7 +24,7 @@
   }, {})
   
   return {
-    most_recent: data[0].data[0],
+    most_recent: data[0].data,
     pairs: counts
   }
 }
