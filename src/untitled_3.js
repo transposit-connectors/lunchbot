@@ -2,8 +2,8 @@
   var data = api.run('this.prev_visits', {id:params.id})[0];
   
   const known = data.most_recent.filter(a => a in data.pairs)
-  
-  if (known === []) {
+
+  if (!known[0]) {
     return "sorry, I can't help you"
   } else {
   	const choices = data.most_recent.map(a => Object.entries(data.pairs[a]).sort((a,b) => b[1] - a[1])[0][0])
