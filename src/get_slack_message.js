@@ -6,7 +6,7 @@
       "type": "section",
       "text": {
           "type": "mrkdwn",
-          "text": "you should go to" + api.run('this.recommend', {id: user})[0]
+          "text": "you should go to " + api.run('this.recommend', {id: user})[0]
       }
     }],
     // The text content gets displayed in the notification
