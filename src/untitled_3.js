@@ -4,7 +4,7 @@
   if (!(data.most_recent in data.pairs)) {
     return "sorry, I can't help you"
   } else {
-    return Object.entries(data.pairs[data.most_recent]).sort((a,b) => b[1] - a[1])[0][0]
+    return "you should go to " + Object.entries(data.pairs[data.most_recent]).sort((a,b) => b[1] - a[1])[0][0]
   }
 }
 
