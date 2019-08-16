@@ -1,5 +1,5 @@
 (params) => {
-  var data = api.run('this.get_user_history', {id: params.id});
+  var user_history = api.run('this.get_user_history', {id: params.id});
   
   var counts = user_history.reduce(
   	(restaurant_mapping, current_restaurants, index) => {
@@ -40,7 +40,7 @@
 
   
   return {
-    most_recent: data[0].data,
+    most_recent: user_history[0].data,
     pairs: counts
   }
 }
