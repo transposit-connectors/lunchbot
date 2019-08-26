@@ -186,6 +186,8 @@
         "hidden": true
       }],
       "userSettingsDisplay": "GENERATED"
-    }
+    },
+    "description": "A bot to slack query your coworkers and decide where to go for lunch.",
+    "displayName": "LunchBot"
   }
 }
