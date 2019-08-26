@@ -1,3 +1,4 @@
+# LunchBot
 
 # Slackbot helper
 
