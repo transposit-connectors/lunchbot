@@ -25,17 +25,20 @@
       }, {
         "id": "totals",
         "function": {
-          "js": "totals.js"
+          "js": "totals.js",
+          "lang": "js"
         }
       }, {
         "id": "get_data",
         "function": {
-          "js": "get_data.js"
+          "js": "get_data.js",
+          "lang": "js"
         }
       }, {
         "id": "daily_counts",
         "function": {
-          "js": "untitled.js"
+          "js": "untitled.js",
+          "lang": "js"
         }
       }, {
         "id": "get_users_info",
@@ -64,7 +67,8 @@
       }, {
         "id": "get_daily_users",
         "function": {
-          "js": "get_daily_users.js"
+          "js": "get_daily_users.js",
+          "lang": "js"
         }
       }, {
         "id": "get_user_history",
@@ -76,7 +80,8 @@
             },
             "type": "STRING"
           }],
-          "js": "untitled_1.js"
+          "js": "untitled_1.js",
+          "lang": "js"
         }
       }, {
         "id": "prev_visits",
@@ -88,7 +93,8 @@
             },
             "type": "STRING"
           }],
-          "js": "untitled_2.js"
+          "js": "untitled_2.js",
+          "lang": "js"
         }
       }, {
         "id": "recommend",
@@ -100,7 +106,8 @@
             },
             "type": "STRING"
           }],
-          "js": "untitled_3.js"
+          "js": "untitled_3.js",
+          "lang": "js"
         }
       }, {
         "id": "webhook",
@@ -112,7 +119,8 @@
             },
             "type": "OBJECT"
           }],
-          "js": "webhook.js"
+          "js": "webhook.js",
+          "lang": "js"
         },
         "access": {
           "requireApiKey": true,
@@ -125,7 +133,8 @@
             "name": "user",
             "type": "STRING"
           }],
-          "js": "get_slack_message.js"
+          "js": "get_slack_message.js",
+          "lang": "js"
         }
       }, {
         "id": "test_post_message",
@@ -187,7 +196,7 @@
       }],
       "userSettingsDisplay": "GENERATED"
     },
-    "description": "A bot to slack query your coworkers and decide where to go for lunch.",
-    "displayName": "LunchBot"
+    "description": "A Slackbot that helps you decide where to eat lunch based off of your past choices with AI.",
+    "displayName": "Lunchbot"
   }
 }
