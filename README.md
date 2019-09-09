@@ -1,5 +1,4 @@
-
-# Slackbot helper
+# Lunchbot
 
 An example of how to build a Transposit-powered, personalized Slack bot.
 
